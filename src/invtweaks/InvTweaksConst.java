@@ -6,7 +6,7 @@ import net.minecraft.client.Minecraft;
 
 public class InvTweaksConst
 {
-    public static final String MOD_VERSION = "1.47 (1.4.6)";
+    public static final String VERSION = "1.48 (1.4.6)";
     public static final String TREE_VERSION = "1.4.0";
     public static final int RULESET_SWAP_DELAY = 1000;
     public static final int AUTO_REFILL_DELAY = 200;
