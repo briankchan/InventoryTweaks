@@ -18,9 +18,40 @@ public class InvTweaksModCompatibility
         this.obf = var1;
     }
 
-    public boolean isSpecialChest(GuiScreen var1)
-    {
-        return is(var1, "GuiAlchChest") || is(var1, "GuiCondenser") || is(var1, "GUIChest") || is(var1, "GuiMultiPageChest") || is(var1, "GuiGoldSafe") || is(var1, "GuiLocker") || is(var1, "GuiDualLocker") || is(var1, "GuiSafe") || is(var1, "GuiCabinet") || is(var1, "GuiTower") || is(var1, "GuiBufferChest") || is(var1, "GuiRetriever") || is(var1, "GuiItemDetect") || is(var1, "GuiAlloyFurnace") || is(var1, "GuiDeploy") || is(var1, "GuiSorter") || is(var1, "GuiFilter") || is(var1, "GuiAdvBench") || is(var1, "GuiEject") || is(var1, "GuiPersonalChest") || is(var1, "GuiNuclearReactor") || is(var1, "GuiEnderChest") || is(var1, "GuiColorBox") || is(var1, "GuiLinkedColorBox") || is(var1, "FC_GuiChest") || is(var1, "FM_GuiMintStorage") || is(var1, "GuiChestTFC") || is(var1, "GuiBackpack") || is(var1, "GuiBag");
+    public boolean isSpecialChest(GuiScreen guiScreen) {
+        return is(guiScreen, "GuiAlchChest") // Equivalent Exchange
+            || is(guiScreen, "GuiCondenser") // Equivalent Exchange
+        	|| is(guiScreen, "GUIChest") // Iron chests (formerly IC2)
+                || is(guiScreen, "GuiMultiPageChest") // Multi Page chest
+                || is(guiScreen, "GuiGoldSafe") // More Storage
+                || is(guiScreen, "GuiLocker")
+                || is(guiScreen, "GuiDualLocker")
+                || is(guiScreen, "GuiSafe") 
+                || is(guiScreen, "GuiCabinet") 
+                || is(guiScreen, "GuiTower")
+                || is(guiScreen, "GuiBufferChest") // Red Power 2
+                || is(guiScreen, "GuiRetriever") // Red Power 2
+                || is(guiScreen, "GuiItemDetect") // Red Power 2
+                || is(guiScreen, "GuiAlloyFurnace") // Red Power 2
+                || is(guiScreen, "GuiDeploy") // Red Power 2
+                || is(guiScreen, "GuiSorter") // Red Power 2
+                || is(guiScreen, "GuiFilter") // Red Power 2
+                || is(guiScreen, "GuiAdvBench") // Red Power 2
+                || is(guiScreen, "GuiEject") // Red Power 2
+                || is(guiScreen, "GuiPersonalChest")
+                || is(guiScreen, "GuiNuclearReactor") // IC2
+                || is(guiScreen, "GuiEnderChest") // EnderChest
+                || is(guiScreen, "GuiColorBox")
+                || is(guiScreen, "GuiLinkedColorBox") // ColorBox
+                || is(guiScreen, "FC_GuiChest") // Metallurgy
+                || is(guiScreen, "FM_GuiMintStorage") // Metallurgy
+                || is(guiScreen, "GuiChestTFC") // TerraFirmaCraft
+                
+                //Added by Lordmau5
+                || is(guiScreen, "GuiBackpack") // Backpack Mod
+                || is(guiScreen, "GuiBag") // Red Power 2 Canvas Bag
+                || is(guiScreen, "GuiReinforcedChest") // Better Storage Mod
+          ;
     }
 
     public int getSpecialChestRowSize(GuiContainer var1, int var2)
