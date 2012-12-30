@@ -1,5 +1,7 @@
 package net.minecraft.src;
 
+import invtweaks.InvTweaksConst;
+
 import java.util.logging.Logger;
 import net.minecraft.client.Minecraft;
 
@@ -16,7 +18,7 @@ public class mod_InvTweaks extends BaseMod
 
     public String getVersion()
     {
-        return "1.47 (1.4.6)";
+        return InvTweaksConst.VERSION;
     }
 
     public void load()
