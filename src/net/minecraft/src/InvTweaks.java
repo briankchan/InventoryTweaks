@@ -538,7 +538,23 @@ public class InvTweaks extends InvTweaksObfuscation
                 }
                 else if (this.isValidInventory(var1))
                 {
-                    this.handleSorting(var1);
+										// Crafting stacks evening
+										if(InvTweaksContainerSection.CRAFTING_IN.equals(var5))
+										{
+												try
+												{
+														new InvTweaksHandlerSorting(this.mc, this.cfgManager.getConfig(), InvTweaksContainerSection.CRAFTING_IN, InvTweaksHandlerSorting.ALGORITHM_EVEN_STACKS, (var3.getSize(var5) == 9) ? 3 : 2).sort();
+                        }
+												catch(Exception e)
+												{
+														logInGameError("invtweaks.sort.crafting.error", e);
+														 e.printStackTrace();
+												}
+										}
+										else
+										{
+												this.handleSorting(var1);
+										}
                 }
             }
         }
